@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { menuRoutes } from "../../../Routes";
 import "../index.css"
 const Foter = () => {
     return ( 
@@ -13,18 +15,8 @@ const Foter = () => {
                         <div>
                             <h1 className="font-medium text-xl mb-6 text-white">QUICK LINK</h1>
                             <div className="grid grid-cols-2 gap-4 text-sm font-normal text-9D9EA2 justify-items-start">
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
-                                <button>1</button>
+                                {menuRoutes.map((route)=><Link to={route.path}>{route.name}</Link>)}
+                                
                             </div>
                         </div>
                         <div>
