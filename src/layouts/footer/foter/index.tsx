@@ -15,7 +15,7 @@ const Foter = () => {
                         <div>
                             <h1 className="font-medium text-xl mb-6 text-white">QUICK LINK</h1>
                             <div className="grid grid-cols-2 gap-4 text-sm font-normal text-9D9EA2 justify-items-start">
-                                {menuRoutes.map((route)=><Link to={route.path}>{route.name}</Link>)}
+                                {menuRoutes.map((route)=><Link key={route.path} to={route.path}>{route.name}</Link>)}
                                 
                             </div>
                         </div>

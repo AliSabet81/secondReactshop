@@ -5,6 +5,7 @@ export { ReactComponent as SubMenuSvg } from "./subMenuSvg.svg";
 export { ReactComponent as TruckSvg } from "./TruckSvg.svg";
 export { ReactComponent as SafeHomeSvg } from "./SafeHomeSvg.svg";
 export { ReactComponent as CoinSvg } from "./coinSvg.svg";
+export { ReactComponent as FillStarSvg } from "./fillStarSvg.svg";
 
 
 

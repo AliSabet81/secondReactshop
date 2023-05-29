@@ -1,5 +1,5 @@
 import HomeScreen from "../screens/home";
-export type TChildren = {
+export type RouteChildren = {
     name : string,
     path  : string,
     element :React.ReactElement
@@ -9,7 +9,7 @@ export type RouteType = {
     path: string;
     variant ?:string,
     name : string,
-    children ?: TChildren[] | undefined
+    children ?: RouteChildren[] | undefined
 }
 
 export const ROUTES = {
@@ -39,15 +39,12 @@ export const ROUTES = {
     ShippingFaq : "ShippingFaq"
 }
 
-
-export const routes:RouteType[] = [
+export const menuRoutes : RouteType[]=[
     {
         element: <HomeScreen/>,
         path:ROUTES.HOME,
         name:"home"
     },
-]
-export const menuRoutes : RouteType[]=[
     {
         element:<h1>hello</h1>,
         path : ROUTES.Track,
@@ -67,7 +64,7 @@ export const menuRoutes : RouteType[]=[
         children : [
             {
                 name : "Cheap Weed",
-                path : ROUTES.Flower,
+                path : ROUTES.CheapWeed,
                 element : <h1>hello</h1>
             },
             {
@@ -180,5 +177,36 @@ export const menuRoutes : RouteType[]=[
         element:<h1>hello</h1>,
         path : ROUTES.ShippingFaq,
         name : "Shipping Faq"
+    },
+]
+
+export const submenuRoutes : RouteType[]=[
+    {
+        name : "Cheap Weed",
+        path : ROUTES.CheapWeed,
+        element : <h1>hello</h1>
+    },
+    {
+        name : "Indica",
+        path : ROUTES.Indica,
+        element : <h1>hello</h1>
+    },
+    {
+        name : "Hybrica",
+        path : ROUTES.Hybrica,
+        element : <h1>hello</h1>
+    },{
+        name : "Sativa",
+        path : ROUTES.Sativa,
+        element : <h1>hello</h1>
+    },
+    {
+        name : "AAAA Weed",
+        path : ROUTES.AAAAWeed,
+        element : <h1>hello</h1>
+    },{
+        name : "Shake/Trim",
+        path : ROUTES.ShakeTrim,
+        element : <h1>hello</h1>
     },
 ]
